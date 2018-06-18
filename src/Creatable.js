@@ -154,7 +154,8 @@ class CreatableSelect extends React.Component {
 
 	render () {
 		const {
-			ref: refProp,
+			// ref: refProp,
+			innerRef: refProp,
 			...restProps
 		} = this.props;
 
@@ -257,6 +258,9 @@ CreatableSelect.propTypes = {
 
 	// See Select.propTypes.filterOptions
 	filterOptions: PropTypes.any,
+
+	//	innerRef
+	innerRef: PropTypes.func,
 
 	// Searches for any matching option within the set of options.
 	// This function prevents duplicate options from being created.
